@@ -1,0 +1,21 @@
+<component>
+	name = "HomeworkPkg"
+	category = eModule
+	LocalRoot = "HomeworkPkg\"
+	RefName = "HomeworkPkg"
+[INF]
+"HWDXE.inf"
+"HWPEI.inf"
+"DispalyPicture.inf"
+"LogDisplayDriver.inf"
+"HomeworTest.inf"
+"ASUSNetTest.inf"
+[files]
+"HomeworkPkg.sdl"	
+"HomeworkPkg.dec"	
+[parts]
+"Homework.HWSetup"
+"HomeworkPkg.SetupInvokeEfi"
+"HomeworkPkg.UEFIBookExercise"
+"UBT"
+<endComponent>

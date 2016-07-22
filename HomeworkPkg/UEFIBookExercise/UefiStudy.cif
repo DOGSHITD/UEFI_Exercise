@@ -1,0 +1,8 @@
+<component>
+	name = "UefiStudy"
+	category = eModule
+	LocalRoot = "HomeworkPkg\UEFIBookExercise\"
+	RefName = "UefiStudy"
+[INF]
+"UefiStudy\UefiStudy.inf"
+<endComponent>

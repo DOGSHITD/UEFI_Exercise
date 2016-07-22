@@ -1,0 +1,40 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = PrintMouseState
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 1730f178-0703-4ebd-9560-2369ca4d05f2
+ENTRY_POINT = PrintMouseState
+
+[Sources]
+PrintMouseState.c
+
+[Packages]
+MdePkg/MdePkg.dec
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+HomeworkPkg/HomeworkPkg.dec
+
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+AmiDxeLib
+
+
+
+[Protocols]
+gEfiSimplePointerProtocolGuid

@@ -1,0 +1,5 @@
+2013/09/05
+不會擋CNFGxxxxxx這類的block (字串長度應該要限制4)
+多次使用後會撈不到manufacture signature (root cause未明)
+[Note]
+有StrLwr, StrUpr, StrLen等function可使用

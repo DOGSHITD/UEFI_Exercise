@@ -1,0 +1,39 @@
+TOKEN
+	Name  = HWSetup_SUPPORT
+	Value  = 0
+	TokenType = Boolean
+	TargetEQU = Yes
+	TargetMAK = Yes
+	Master = Yes
+	Help  = "Main switch to enable HWSetup support in Project"
+End
+
+PATH
+    Name  = "HWSETUP_DIR"
+End
+
+
+ELINK
+    Name  = "InitSetupStrings,"
+    Parent  = "SetupStringInit"
+    InvokeOrder = AfterParent
+End
+
+ELINK
+	Name  = "$(HWSETUP_DIR)\HWSetup.uni"
+	Parent  = "SetupStringFiles"
+	InvokeOrder = AfterParent
+End
+
+ELINK
+    Name  = "$(HWSETUP_DIR)\HWSetup.sd"
+    Parent  = "SETUP_DEFINITIONS"
+    Priority  = 99
+    InvokeOrder = AfterParent
+End
+
+ELINK
+    Name  = "$(HWSETUP_DIR)\HWSetup.c"
+    Parent  = "SetupCallbackFiles"
+    InvokeOrder = AfterParent
+End

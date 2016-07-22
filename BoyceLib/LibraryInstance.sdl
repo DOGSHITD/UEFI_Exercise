@@ -1,0 +1,28 @@
+TOKEN
+	Name  = "LibraryInstance_SUPPORT"
+	Value  = "1"
+	Help  = "Switch for Enabling LibraryInstance support in the project"
+	TokenType = Boolean
+	Master = Yes
+	Disable = Yes
+End
+
+TOKEN
+	Name  = "LibTest_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable LibTest support in Project"
+	TokenType = Boolean
+End
+
+INFComponent
+	Name  = "LibTest"
+	File  = "LibraryInstance/LibTest.inf"
+	Token = "LibTest_SUPPORT" "=" "1"
+	Package = BoyceLib
+End
+
+LibraryMapping
+	Class  = "BoyceLib"
+	Instance  = "BoyceLib.LibTest"
+End
+

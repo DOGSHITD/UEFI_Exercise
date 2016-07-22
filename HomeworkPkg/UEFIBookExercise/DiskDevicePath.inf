@@ -1,0 +1,25 @@
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = DiskDevicePath
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 667037b1-8f64-4da2-b4fb-b2ccd8e177ed
+ENTRY_POINT = DiskDevicePath
+
+[Sources]
+DiskDevicePath.c
+
+[Packages]
+MdePkg/MdePkg.dec
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+HomeworkPkg/HomeworkPkg.dec
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+AmiDxeLib
+
+[Protocols]
+gEfiDiskIoProtocolGuid
+gEfiDevicePathToTextProtocolGuid

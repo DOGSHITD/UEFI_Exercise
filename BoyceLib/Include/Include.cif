@@ -1,0 +1,11 @@
+<component>
+	name = "Include"
+	category = ModulePart
+	Rank = 40
+	LocalRoot = "BoyceLib\Include\"
+	RefName = "BoyceLib.Include"
+[properties]
+	Orphan = BoyceLib
+[files]
+"sstd.h"	
+<endComponent>

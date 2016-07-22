@@ -1,0 +1,12 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = BoyceLib
+  PACKAGE_GUID                   = c23c0a93-c6c6-49fb-9213-11a078e8f3f8
+  PACKAGE_VERSION                = 1.0
+  
+[Includes]
+  Include
+   
+[LibraryClasses]
+  BoyceLib|Include/sstd.h
+# BoyceLib|LibraryInstance/LibTest.inf

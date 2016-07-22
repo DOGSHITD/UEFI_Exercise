@@ -1,0 +1,18 @@
+
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = HWInterface
+  FILE_GUID                      = ba20eec6-a735-48b5-a605-881a90d362f9
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = HWInterface|DXE_DRIVER
+
+[Sources]
+  HWInterface.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  HomeworkPkg/HomeworkPkg.dec 
+ 
+[LibraryClasses]

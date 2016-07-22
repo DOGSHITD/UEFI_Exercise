@@ -1,0 +1,39 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = UBT
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 462a8010-1175-4d8b-8cc4-fc2ab500acfd
+ENTRY_POINT = UBTAppEntry
+
+[Sources]
+UBTStrings.uni
+OutB2.asm
+GetSMBios.c
+Subutility.c
+UBT.c
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+
+[Packages]
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+MdePkg/MdePkg.dec
+AsusPkg/AsusPkg.dec
+

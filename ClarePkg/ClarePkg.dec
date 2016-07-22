@@ -1,0 +1,11 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = ClarePkg
+  PACKAGE_GUID                   = D1E2E9C6-4795-4415-9B43-6D9C398107C7
+  PACKAGE_VERSION                = 1.04
+  
+[Includes]
+  Include
+  
+[LibraryClasses]
+  Cocos|Include/Cocos.h

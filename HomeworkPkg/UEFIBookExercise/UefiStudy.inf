@@ -1,0 +1,34 @@
+
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = UefiStudy
+MODULE_TYPE = DXE_SMM_DRIVER#UEFI_APPLICATION
+PI_SPECIFICATION_VERSION = 0x0001000A
+FILE_GUID = bb4ca21d-bd29-4f75-8519-5ee79f90a01c
+ENTRY_POINT = SMITest#CreateEventTest
+
+[Sources]
+#UefiStudy/CreatEventTest.c
+SMITest.c
+
+[LibraryClasses]
+UefiDriverEntryPoint
+#UefiApplicationEntryPoint
+UefiLib
+AmiDxeLib
+
+[Protocols]
+gEfiSmmSwDispatch2ProtocolGuid
+gEfiSmmBase2ProtocolGuid
+[Packages]
+MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+  AmiModulePkg/AmiModulePkg.dec
+HomeworkPkg/HomeworkPkg.dec
+
+[Depex]
+gEfiSmmSwDispatch2ProtocolGuid AND
+gEfiSmmBase2ProtocolGuid

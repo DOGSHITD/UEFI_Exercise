@@ -1,0 +1,10 @@
+<component>
+	name = "UBT"
+	category = ModulePart
+	LocalRoot = "HomeworkPkg\UBT\"
+	RefName = "UBT"
+[INF]
+"UBT.inf"
+[files]
+"UBT.sdl"	
+<endComponent>

@@ -1,0 +1,150 @@
+TOKEN
+	Name  = "HomeworkPkg_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable HomeworkPkg support in Project"
+	TokenType = Boolean
+	TargetEQU = Yes
+	TargetMAK = Yes
+	Master = Yes
+End
+
+TOKEN
+	Name  = "HWDXE_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable HWDXE support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "HWPEI_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable HWPEI support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "DispalyPicture_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable DispalyPicture support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "LogDisplayDriver_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable LogDisplayDriver support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "EfiLibLogDisplayEnable"
+	Value  = "0"
+	Help  = "Main switch to enable display port 0x80"
+	TokenType = Boolean
+	TargetH = Yes
+End
+
+TOKEN
+	Name  = "HomeworTest_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable HomeworTest support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "Module_Trace_Enable"
+	Value  = "1"
+	Help  = "Main switch to enable HomeworTest Module Trace."
+	TokenType = Boolean
+	TargetH = Yes
+End
+
+#ASUSNetTest inf need asus code base to support
+TOKEN
+	Name  = "ASUSNetTest_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable ASUSNetTest support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "UBT_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable UBT support in Project"
+	TokenType = Boolean
+End
+
+PATH
+	Name  = "HomeworkPkg_DIR"
+End
+
+INFComponent
+	Name  = "HWDXE"
+	File  = "HWDXE.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "DXE_DRIVER"
+	Token = "HWDXE_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "HWPEI"
+	File  = "HWPEI.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "PEIM"
+	Token = "HWPEI_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "DispalyPicture"
+	File  = "DispalyPicture.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "DispalyPicture_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "LogDisplayDriver"
+	File  = "LogDisplayDriver.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_DRIVER"
+	Token = "LogDisplayDriver_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "HomeworTest"
+	File  = "HomeworTest.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "HomeworTest_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "ASUSNetTest"
+	File  = "ASUSNetTest.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "ASUSNetTest_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "UBT"
+	File  = "UTB/UBT.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "UBT_SUPPORT" "=" "1"
+End
+
+FFS_FILE
+	Name  = "HWPEI"
+	FD_AREA  = "FV_BB"
+	INFComponent  = "HomeworkPkg.HWPEI"
+	Token = "HWPEI_SUPPORT" "=" "1"
+End
+
+FFS_FILE
+	Name  = "HWDXE"
+	FD_AREA  = "FV_Main"
+	INFComponent  = "HomeworkPkg.HWDXE"
+	Token = "HWDXE_SUPPORT" "=" "1"
+End
+

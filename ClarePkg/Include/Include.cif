@@ -1,0 +1,9 @@
+<component>
+	name = "Include"
+	category = ModulePart
+	Rank = 40
+	LocalRoot = "ClarePkg\Include\"
+	RefName = "ClarePkg.Include"
+[files]
+"Cocos.h"	
+<endComponent>

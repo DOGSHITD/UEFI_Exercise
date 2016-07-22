@@ -1,0 +1,168 @@
+TOKEN
+	Name  = "UEFIBookExercise_SUPPORT"
+	Value  = "1"
+	Help  = "Switch for Enabling UEFIBookExercise support in the project"
+	TokenType = Boolean
+	Master = Yes
+	Disable = Yes
+End
+
+TOKEN
+	Name  = "BlockIoExercise_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable BlockIoExercise support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "CMainTest_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable CMainTest support in Project"
+	TokenType = Boolean
+End
+
+
+#GPNV STVC_Data Reader
+TOKEN
+	Name  = "DetectBootablePartiton_SUPPORT"
+	Value  = "0"
+	Help  = "Main switch to enable DetectBootablePartiton support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "DiskDevicePath_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable DiskDevicePath support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "NetworkTest_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable NetworkTest support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "PrintMouseState_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable PrintMouseState support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "ReadBootoption_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable ReadBootoption support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "UefiStudy_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable UefiStudy support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "HomeworkTest_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable UefiStudy support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "TestMPP_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable TestMPP support in Project"
+	TokenType = Boolean
+End
+
+TOKEN
+	Name  = "SetTimer_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable SetTimer support in Project"
+	TokenType = Boolean
+End
+
+INFComponent
+	Name  = "CMainTest"
+	File  = "CMainTest.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "CMainTest_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "DetectBootablePartiton"
+	File  = "DetectBootablePartiton.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "DetectBootablePartiton_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "DiskDevicePath"
+	File  = "DiskDevicePath.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "DiskDevicePath_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "BlockIoExercise"
+	File  = "BlockIoExercise.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "BlockIoExercise_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "NetworkTest"
+	File  = "NetworkTest.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "NetworkTest_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "PrintMouseState"
+	File  = "PrintMouseState.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "PrintMouseState_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "ReadBootoption"
+	File  = "ReadBootoption.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "ReadBootoption_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "UefiStudy"
+	File  = "UefiStudy.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "DXE_SMM_DRIVER"
+	Token = "UefiStudy_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "TestMPP"
+	File  = "TestMPP.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "TestMPP_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "SetTimer"
+	File  = "../SetTimer.inf"
+	Package  = "HomeworkPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Token = "SetTimer_SUPPORT" "=" "1"
+End
+

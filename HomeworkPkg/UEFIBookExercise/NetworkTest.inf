@@ -1,0 +1,42 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = NetworkTest
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = f505b5d5-6bea-4c77-9701-835d52b77378
+ENTRY_POINT = UefiMain
+
+[Sources]
+RegisterSocket.c
+NetworkMain.c
+#RegisterSocket.h
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+#BoyceLib
+
+[Protocols]
+gEfiTcp4ServiceBindingProtocolGuid
+gEfiTcp4ProtocolGuid
+
+[Packages]
+MdePkg/MdePkg.dec
+CryptoPkg/CryptoPkg.dec
+#BoyceLib/BoyceLib.dec
+

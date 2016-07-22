@@ -1,0 +1,28 @@
+
+
+[Defines]
+ INF_VERSION                    = 0x00010005
+ BASE_NAME                      = ReadBootoption
+ FILE_GUID                      = b5d2030d-17ef-412d-bfce-bd8774b55193 
+ MODULE_TYPE                    = UEFI_APPLICATION
+ VERSION_STRING                 = 1.0
+ ENTRY_POINT                    = ParseBootoptions
+
+[Sources]
+ReadBootOption.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  AmiModulePkg/AmiModulePkg.dec
+  AmiCompatibilityPkg/AmiCompatibilityPkg.dec 
+  MdeModulePkg/MdeModulePkg.dec
+  
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  AmiDxeLib
+
+[Guids]
+  gEfiGlobalVariableGuid
+[Depex]
+ #gEfiPeiReadOnlyVariable2PpiGuid AND
+ #gEfiPeiStallPpiGuid

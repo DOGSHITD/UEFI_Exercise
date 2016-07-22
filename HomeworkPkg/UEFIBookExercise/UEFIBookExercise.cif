@@ -1,0 +1,19 @@
+<component>
+	name = "UEFIBookExercise"
+	category = ModulePart
+	LocalRoot = "HomeworkPkg\UEFIBookExercise\"
+	RefName = "HomeworkPkg.UEFIBookExercise"
+[INF]
+"BlockIoExercise.inf"
+"CMainTest.inf"
+"DetectBootablePartiton.inf"
+"DiskDevicePath.inf"
+"NetworkTest.inf"
+"PrintMouseState.inf"
+"ReadBootoption.inf"
+"UefiStudy.inf"
+"TestMPP.inf"
+"..\SetTimer.inf"
+[files]
+"UEFIBookExercise.sdl"	
+<endComponent>

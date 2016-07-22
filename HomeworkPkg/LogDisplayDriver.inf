@@ -1,0 +1,29 @@
+
+
+[Defines]
+INF_VERSION           = 0x00010005
+BASE_NAME             = LogDisplayDriver
+FILE_GUID             = 0ce0493d-c914-4394-bfda-f75743defe53
+MODULE_TYPE           = UEFI_DRIVER
+VERSION_STRING        = 1.0
+ENTRY_POINT           = LogDisplayDriver
+#UNLOAD_IMAGE                   = NetLibDefaultUnload
+
+[Sources]
+LogDisplayDriver.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  AmiCompatibilityPkg/AmiCompatibilityPkg.dec 
+  AmiModulePkg/AmiModulePkg.dec
+  HomeworkPkg/HomeworkPkg.dec
+
+[Protocols]
+gEfiHiiFontProtocolGuid
+  
+[LibraryClasses]
+  UefiDriverEntryPoint
+  AmiDxeLib
+  UefiLib
+  UefiHiiServicesLib

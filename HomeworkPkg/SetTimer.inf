@@ -1,0 +1,26 @@
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = SetTimer
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 447ccd9b-d19f-43ec-8ff5-4c814e98530c
+ENTRY_POINT = SetTimerEntrypoint
+PI_SPECIFICATION_VERSION = 0x0001000A
+
+[Sources]
+SetTimer.c
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+AmiDxeLib
+Minisetup
+[Packages]
+MdePkg/MdePkg.dec
+MdeModulePkg/MdeModulePkg.dec
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+AmiModulePkg/AmiModulePkg.dec
+HomeworkPkg/HomeworkPkg.dec
+AmiTsePkg/AmiTsePkg.dec
+[Protocols]

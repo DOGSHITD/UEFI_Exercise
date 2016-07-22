@@ -1,0 +1,16 @@
+<component>
+	name = "SetupInvokeEfi"
+	category = ModulePart
+	Rank = 40
+	LocalRoot = "HomeworkPkg\SetupInvokeEfi\"
+	RefName = "HomeworkPkg.SetupInvokeEfi"
+[properties]
+	Orphan = HomeworkPkg
+[INF]
+"SetupInvokeEfi.inf"
+[files]
+"SetupInvokeEfi.sdl"	
+"SetupInvokeEfiFdfFileStatementX64.txt"	
+"SetupInvokeEfi.sd"	
+"SetupInvokeEfi.uni"	
+<endComponent>

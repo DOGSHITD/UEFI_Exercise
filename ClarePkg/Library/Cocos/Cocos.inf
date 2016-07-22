@@ -1,0 +1,17 @@
+
+
+[Defines]
+  INF_VERSION                   = 0x00010005
+  BASE_NAME 			= Cocos
+#  FILE_GUID                     = 006FCCD3-DDD0-4a65-A8C0-64589A958B14
+  VERSION_STRING                = 1.0
+  MODULE_TYPE                   = BASE
+  LIBRARY_CLASS                 = Cocos
+
+[Sources]
+  Cocos.c
+  
+[Packages]
+  MdePkg/MdePkg.dec
+  ClarePkg/ClarePkg.dec
+

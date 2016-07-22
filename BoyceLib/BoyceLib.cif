@@ -1,0 +1,13 @@
+<component>
+	name = "BoyceLib"
+	category = eModule
+	LocalRoot = "BoyceLib\"
+	RefName = "BoyceLib"
+[files]
+"BoyceLib.sdl"	
+"BoyceLib.dec"	
+[parts]
+"BoyceLib.LibraryInstance"
+"BoyceLib.Include"
+"Boyce.LibraryInstance"
+<endComponent>

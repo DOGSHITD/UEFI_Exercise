@@ -1,0 +1,20 @@
+TOKEN
+	Name  = ClarePkg_SUPPORT
+	Value  = 1
+	TokenType = Boolean
+	TargetEQU = Yes
+	TargetMAK = Yes
+	Master = Yes
+	Help  = "Main switch to enable ClarePkg support in Project"
+End
+
+INFComponent
+	Name  = "Cocos"
+	File  = "Library/Cocos/Cocos.inf"
+	Package  = "ClarePkg"
+End
+
+LibraryMapping
+	Class  = "Cocos"
+	Instance  = "ClarePkg.Cocos"
+End

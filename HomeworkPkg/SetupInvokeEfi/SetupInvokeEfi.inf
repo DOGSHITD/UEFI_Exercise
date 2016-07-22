@@ -1,0 +1,25 @@
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SetupInvokeEfi
+  FILE_GUID                      = 74434af9-1eb4-4b35-aa1d-a55f72775ee5
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.1
+  ENTRY_POINT                    = MainEntry
+
+[Sources]
+  SetupInvokeEfi.c
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  AmiDxeLib
+
+
+[Packages]
+  MdePkg\MdePkg.dec
+  MdeModulePkg\MdeModulePkg.dec
+  AmiCompatibilityPkg\AmiCompatibilityPkg.dec
+  AmiModulePkg\AmiModulePkg.dec
+  AsusPkg\AsusPkg.dec
+  VDebug/VDebug.dec

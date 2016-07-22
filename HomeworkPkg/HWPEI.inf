@@ -1,0 +1,36 @@
+
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = HWPEI
+  FILE_GUID                      = 58465700-00ae-40a3-9a4f-4b631523f65d
+  MODULE_TYPE                    = PEIM
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = HomeworkPEI
+
+[Sources]
+HWPEI.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  AmiCompatibilityPkg/AmiCompatibilityPkg.dec   # Optional. should use Mde Library instead.
+  #MdeModulePkg/MdeModulePkg.dec
+  
+ [LibraryClasses]
+  PeimEntryPoint
+  AmiPeiLib # Optional. should use Mde Library instead.
+ 
+ [Guids]
+ 
+ [Ppis]
+ 
+ [Protocols]
+ 
+ [Depex]
+   gEfiPeiReadOnlyVariable2PpiGuid AND
+   gEfiPeiStallPpiGuid #AND
+   #gEfiPeiRecoveryModulePpiGuid AND
+   #gEfiPeiDeviceRecoveryModulePpiGuid AND
+   #gEfiPeiVirtualBlockIoPpiGuid AND
+   #gPeiUsbIoPpiGuid AND
+   #gPeiUsbHostControllerPpiGuid

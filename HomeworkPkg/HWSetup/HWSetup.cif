@@ -1,0 +1,11 @@
+<component>
+	name = "HWSetup"
+	category = ModulePart
+	LocalRoot = "HomeworkPkg\HWSetup\"
+	RefName = "Homework.HWSetup"
+[files]
+"HWSetup.sdl"	
+"HWSetup.c"	
+"HWSetup.sd"	
+"HWSetup.uni"	
+<endComponent>

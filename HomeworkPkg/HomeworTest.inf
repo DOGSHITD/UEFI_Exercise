@@ -1,0 +1,48 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = HomeworkTest
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 23333d59-2957-481f-8fbd-895e1d32b172
+ENTRY_POINT = ShellCEntryLib    #For ShellApp
+#ENTRY_POINT = HomeworkTest   #For General Application
+#  CONSTRUCTOR =HomeworkConstructor
+#  DESTRUCTOR  =HomeworkDestructor
+
+[Sources]
+HomeworkTest.c
+
+[LibraryClasses]
+ShellCEntryLib
+UefiLib
+BoyceLib
+#  UefiApplicationEntryPoint #For General Application
+  AmiDxeLib                 #For General Application
+  UefiBootServicesTableLib
+
+[Protocols]
+gLogDisplayDriverProtocolGuid
+
+[Packages]
+MdePkg/MdePkg.dec
+ShellPkg/ShellPkg.dec
+AmiModulePkg/AmiModulePkg.dec
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+MdeModulePkg/MdeModulePkg.dec
+HomeworkPkg/HomeworkPkg.dec
+BoyceLib/BoyceLib.dec
+

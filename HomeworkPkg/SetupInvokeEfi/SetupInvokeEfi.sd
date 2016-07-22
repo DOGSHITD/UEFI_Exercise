@@ -1,0 +1,91 @@
+//**********************************************************************
+//**********************************************************************
+//**                                                                  **
+//**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+//**                                                                  **
+//**                       All Rights Reserved.                       **
+//**                                                                  **
+//**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+//**                                                                  **
+//**                       Phone: (770)-246-8600                      **
+//**                                                                  **
+//**********************************************************************
+//**********************************************************************
+
+//**********************************************************************
+// $Header: /Alaska/Tools/template.sd 6     1/13/10 2:13p Felixp $
+//
+// $Revision: 6 $
+//
+// $Date: 1/13/10 2:13p $
+//**********************************************************************
+// Revision History
+// ----------------
+// $Log: /Alaska/Tools/template.sd $
+// 
+// 6     1/13/10 2:13p Felixp
+// 
+//**********************************************************************
+//<AMI_FHDR_START>
+//
+// Name:  <This File's Name>
+//
+// Description:	
+//
+//<AMI_FHDR_END>
+//**********************************************************************
+
+#ifdef SETUP_DATA_DEFINITION
+// Put NVRAM data definitions here.
+// For example:	UINT8 Data1;
+// These definitions will be converted by the build process
+// to a definitions of SETUP_DATA fields.
+#endif
+
+//Select Top level menu itmem (forset) for you pages
+#ifdef ADVANCED_FORM_SET //CHIPSET_FORM_SET
+
+#ifdef FORM_SET_TYPEDEF
+//If you need any additional type definitions add them here 
+  #define SETUPINVOKEEFI_GUID \
+    { 0x74434af9, 0x1eb4, 0x4b35, 0xaa, 0x1d, 0xa5, 0x5f, 0x72, 0x77, 0x5e, 0xe5 }
+
+  typedef struct{
+    UINT16       Value;
+  }SETUPINVOKEEFI;
+  
+  #define SETUPINVOKEEFI_KEY_ID 0xF028
+#endif
+
+#ifdef FORM_SET_VARSTORE
+//If you need custom varstore's define them here
+    varstore SETUPINVOKEEFI,
+        key   = SETUPINVOKEEFI_KEY_ID,
+        name  = SetupInvokeEfi,
+        guid  = SETUPINVOKEEFI_GUID;
+#endif
+
+#ifdef FORM_SET_ITEM
+//	Define controls to be added to the top level page of the formset
+       suppressif ideqvallist SETUPINVOKEEFI.Value == 1;
+       grayoutif ideqval SYSTEM_ACCESS.Access == SYSTEM_PASSWORD_USER;
+           goto ADVANCED_MAIN,
+           prompt = STRING_TOKEN(STR_SETUPINVOKEEFI),
+           help = STRING_TOKEN(STR_SETUPINVOKEEFI_HELP);
+       SUPPRESS_GRAYOUT_ENDIF    
+#endif
+
+#endif
+//**********************************************************************
+//**********************************************************************
+//**                                                                  **
+//**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+//**                                                                  **
+//**                       All Rights Reserved.                       **
+//**                                                                  **
+//**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+//**                                                                  **
+//**                       Phone: (770)-246-8600                      **
+//**                                                                  **
+//**********************************************************************
+//**********************************************************************

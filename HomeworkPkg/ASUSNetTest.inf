@@ -1,0 +1,22 @@
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = ASUSNetTest
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 01d7791c-6cdb-406d-9299-e6bef692976c
+ENTRY_POINT = UBTAppEntry
+
+[Sources]
+AsusNetTest.c
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+
+[Protocols]
+
+[Packages]
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+MdePkg/MdePkg.dec
+AsusPkg/AsusPkg.dec

@@ -1,0 +1,12 @@
+<component>
+	name = "ClarePkg"
+	category = eModule
+	LocalRoot = "ClarePkg\"
+	RefName = "ClarePkg"
+[files]
+"ClarePkg.sdl"	
+"ClarePkg.dec"	
+[parts]
+"ClarePkg.LibraryInstance"
+"ClarePkg.Include"
+<endComponent>

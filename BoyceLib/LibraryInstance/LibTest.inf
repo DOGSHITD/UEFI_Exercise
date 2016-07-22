@@ -1,0 +1,34 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+
+[Defines]
+INF_VERSION                   = 0x00010005
+BASE_NAME                     = LibTest
+FILE_GUID                     = 2b4a206b-a8e4-487b-9de3-59445789c5a8
+VERSION_STRING                = 1.0
+MODULE_TYPE                   = BASE
+LIBRARY_CLASS                 = BoyceLib
+#CONSTRUCTOR                   = BoyceLibConstructor
+#DESTRUCTOR                    = BoyceLibDestructor
+
+[Sources]
+Test.CPP
+
+[Packages]
+MdePkg/MdePkg.dec
+BoyceLib/BoyceLib.dec
+
+[LibraryClasses]
+UefiLib

@@ -1,0 +1,18 @@
+
+
+ [Defines]
+  DEC_SPECIFICATION               = 0x00010005
+  PACKAGE_NAME                    = HomeworkPkg
+  PACKAGE_GUID                    = 7bc8277c-4cb0-430e-910e-13a17899e2cf
+  PACKAGE_VERSION                 = 0.1 
+  
+ [Includes]
+
+  
+ [LibraryClasses]
+
+ [Guids]
+
+ [Protocols]
+  gLogDisplayDriverProtocolGuid = {0xa1f26873, 0xdc4e, 0x44b0, {0xb0, 0xee, 0x1e, 0xaf, 0xae, 0x96, 0xf0, 0xbc}}
+  

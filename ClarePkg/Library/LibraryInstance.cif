@@ -1,0 +1,9 @@
+<component>
+	name = "LibraryInstance"
+	category = ModulePart
+	Rank = 40
+	LocalRoot = "ClarePkg\Library\"
+	RefName = "ClarePkg.LibraryInstance"
+[INF]
+"Cocos\Cocos.inf"
+<endComponent>

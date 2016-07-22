@@ -1,0 +1,110 @@
+//**********************************************************************
+//**********************************************************************
+//**                                                                  **
+//**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+//**                                                                  **
+//**                       All Rights Reserved.                       **
+//**                                                                  **
+//**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+//**                                                                  **
+//**                       Phone: (770)-246-8600                      **
+//**                                                                  **
+//**********************************************************************
+//**********************************************************************
+
+//**********************************************************************
+// $Header: /Alaska/Tools/template.sd 6     1/13/10 2:13p Felixp $
+//
+// $Revision: 6 $
+//
+// $Date: 1/13/10 2:13p $
+//**********************************************************************
+// Revision History
+// ----------------
+// $Log: /Alaska/Tools/template.sd $
+// 
+// 6     1/13/10 2:13p Felixp
+// 
+//**********************************************************************
+//<AMI_FHDR_START>
+//
+// Name:  <This File's Name>
+//
+// Description:	
+//
+//<AMI_FHDR_END>
+//**********************************************************************
+
+#ifdef SETUP_DATA_DEFINITION
+// Put NVRAM data definitions here.
+// For example:	UINT8 Data1;
+// These definitions will be converted by the build process
+// to a definitions of SETUP_DATA fields.
+   UINT16  HomeworkOption;
+#endif
+
+//Select Top level menu itmem (forset) for you pages
+#ifdef ADVANCED_FORM_SET //CHIPSET_FORM_SET
+
+#ifdef FORM_SET_TYPEDEF
+//If you need any additional type definitions add them here
+//typedef struct{
+//    UINT8 MyField;
+//} MyVariable;
+#endif
+
+#ifdef FORM_SET_VARSTORE
+//If you need custom varstore's define them here
+//    varstore MY_VARIABLE,
+//        key   = AUTO_ID(MY_VARSTORE_ID),
+//        name  = MyVariable,
+//        guid  = SETUP_GUID;
+#endif
+
+#ifdef FORM_SET_ITEM
+//	Define controls to be added to the top level page of the formset
+//	checkbox varid = SETUP_DATA.MyCombobox,
+//		prompt = STRING_TOKEN(...),
+//		help = STRING_TOKEN(...),  
+//		flags = 0, // Flags behavior for checkbox is overloaded so that it equals a DEFAULT value.  1 = ON, 0 = off
+//	endcheckbox;	
+#endif
+
+#ifdef FORM_SET_GOTO
+// Define goto commands for the forms defined in this file
+	goto HOMEWORK_FORM_ID, 
+		prompt = STRING_TOKEN(STR_HOMEWORK_FORM),
+                help = STRING_TOKEN(STR_HOMEWORK_FORM_HELP);
+#endif
+
+#ifdef FORM_SET_FORM
+// Define forms
+	form formid = AUTO_ID(HOMEWORK_FORM_ID),
+            title = STRING_TOKEN(STR_HOMEWORK_FORM);
+
+            oneof varid = SETUP_DATA.HomeworkOption,
+		prompt=STRING_TOKEN(STR_MODULE_ITEM_PROMPT),
+		help=STRING_TOKEN(STR_MODULE_ITEM_HELP),
+		option text=STRING_TOKEN(STR_OPTION_ZERO),value=0,flags=RESET_REQUIRED;
+		option text=STRING_TOKEN(STR_OPTION_ONE),value=1,flags=DEFAULT|RESET_REQUIRED;
+		option text=STRING_TOKEN(STR_OPTION_TWO),value=2,flags=DEFAULT|RESET_REQUIRED;
+	    endoneof;
+
+        endform;  // CRB_FORM_ID
+
+    #endif  // FORM_SET_FORM
+
+#endif
+//**********************************************************************
+//**********************************************************************
+//**                                                                  **
+//**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+//**                                                                  **
+//**                       All Rights Reserved.                       **
+//**                                                                  **
+//**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+//**                                                                  **
+//**                       Phone: (770)-246-8600                      **
+//**                                                                  **
+//**********************************************************************
+//**********************************************************************

@@ -1,0 +1,44 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.0
+BASE_NAME = DetectBootablePartiton
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = d707288b-df48-478d-b2a0-cf78439bd8ad
+ENTRY_POINT = UefiMain #DetectBootablePartiton
+
+[Sources]
+DetectBootablePartition.c
+
+[Packages]
+MdePkg/MdePkg.dec
+AmiTsePkg/AmiTsePkg.dec
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+HomeworkPkg/HomeworkPkg.dec
+ChvRefCodePkg\PlatformPkg.dec
+AmiNetworkPkg/AmiNetworkPkg.dec
+AsusPkg/AsusPkg.dec
+[Guids]
+gEfiSetupVariableGuid
+
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+#DebugLib
+AmiDxeLib
+
+

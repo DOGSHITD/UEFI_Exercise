@@ -1,0 +1,13 @@
+<component>
+	name = "LibraryInstance"
+	category = ModulePart
+	Rank = 40
+	LocalRoot = "BoyceLib\"
+	RefName = "Boyce.LibraryInstance"
+[properties]
+	Orphan = BoyceLib
+[INF]
+"LibraryInstance\LibTest.inf"
+[files]
+"LibraryInstance.sdl"	
+<endComponent>

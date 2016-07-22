@@ -1,0 +1,9 @@
+TOKEN
+	Name  = BoyceLib_SUPPORT
+	Value  = 1
+	TokenType = Boolean
+	TargetEQU = Yes
+	TargetMAK = Yes
+	Master = Yes
+	Help  = "Main switch to enable BoyceLib support in Project"
+End

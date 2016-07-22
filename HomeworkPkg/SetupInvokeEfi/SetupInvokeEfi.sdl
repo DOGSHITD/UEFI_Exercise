@@ -1,0 +1,41 @@
+TOKEN
+	Name  = "SetupInvokeEfi_SUPPORT"
+	Value  = "1"
+	Help  = "Main switch to enable SetupInvokeEfi support in Project"
+	TokenType = Boolean
+	TargetEQU = Yes
+	TargetMAK = Yes
+	Master = Yes
+End
+
+FFS_FILE
+        Name  = "SetupInvokeEfiFdfFileStatement"
+        FD_AREA  = "FV_MAIN"
+        FILE_Stmt  = "HomeworkPkg\SetupInvokeEfi\SetupInvokeEfiFdfFileStatementX64.txt"
+End
+
+INFComponent
+	Name  = "SetupInvokeEfi"
+	File  = "SetupInvokeEfi.inf"
+	Package  = "AsusPkg"
+	ModuleTypes  = "UEFI_APPLICATION"
+	Skip_Packaging = Yes
+	Token = "SetupInvokeEfi_SUPPORT" "=" "1"
+End
+
+PATH
+        Name  = "SetupInvokeEfi_DIR"
+End
+
+ELINK
+        Name  = "$(SetupInvokeEfi_DIR)/SetupInvokeEfi.sd"
+        Parent  = "SETUP_DEFINITIONS"
+        Priority  = 5
+        InvokeOrder = AfterParent
+End
+
+ELINK
+        Name  = "$(SetupInvokeEfi_DIR)/SetupInvokeEfi.uni"
+        Parent  = "SetupStringFiles"
+        InvokeOrder = AfterParent
+End

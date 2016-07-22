@@ -1,0 +1,5 @@
+  FILE APPLICATION = 74434af9-1eb4-4b35-aa1d-a55f72775ee5 {
+    SECTION COMPRESS PI_STD {
+    SECTION PE32 = $(OUTPUT_DIRECTORY)/$(TARGET)_$(TOOL_CHAIN_TAG)/X64/HomeworkPkg/SetupInvokeEfi/SetupInvokeEfi/OUTPUT/SetupInvokeEfi.efi
+    }
+  }

@@ -1,0 +1,40 @@
+#
+# UBT.inf: Project description file.
+#
+[Defines]
+INF_VERSION = 0x00010005
+VERSION_STRING = 1.1
+BASE_NAME = UBT
+MODULE_TYPE = UEFI_APPLICATION
+FILE_GUID = 6e8cc07f-4807-432d-8f76-82b717b0bfe7
+ENTRY_POINT = UBTAppEntry
+
+[sources]
+  Subutility.c
+  UBT.c
+  GetSmbios.c
+#  OutB2.asm
+  GetSmbios.h
+  UBT.h
+  Subutility.h
+  Print.c
+  Print.h
+  
+[LibraryClasses]
+UefiApplicationEntryPoint
+UefiLib
+AmiDxeLib
+
+[Packages]
+MdePkg/MdePkg.dec
+MdeModulePkg/MdeModulePkg.dec
+AmiCompatibilityPkg/AmiCompatibilityPkg.dec
+ShellPkg/ShellPkg.dec
+  
+[Protocols]
+gEfiShellInterfaceGuid
+gEfiShellParametersProtocolGuid
+
+[Guids]
+gEfiSmbiosTableGuid
+
